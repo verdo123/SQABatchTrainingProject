@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class UjianMingguke3 {
 
     public static void main(String[] args) {
-        String path2 = "C:\\Users\\Personal\\IdeaProjects\\SQABatchTrainingProject\\chromedriver-win64\\chromedriver.exe";
+        String path2 = "C:\\Users\\Verdo Daviarta\\IdeaProjects\\SQABatchTrainingProject\\chromedriver-win64\\chromedriver.exe";
         String url = "https://shop.demoqa.com/";
 
         System.setProperty("webdriver.chrome.driver", path2);
