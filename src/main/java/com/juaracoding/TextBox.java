@@ -37,7 +37,7 @@ public class TextBox {
 
         driver.findElement(By.id("permanentAddress")).sendKeys("Jl. Kebon kacang, Jakarta Pusat");
         driver.findElement(By.id("submit")).click();
-
+        
     }
 }
 

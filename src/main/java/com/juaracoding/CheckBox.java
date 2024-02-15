@@ -20,10 +20,11 @@ public class CheckBox {
 
     public static void main(String[] args) {
 
-        String path = "C:\\Users\\User\\IdeaProjects\\vdsqabatch13\\chromedriver-win64\\chromedriver.exe";
+//        String path1 = "C:\\Users\\User\\IdeaProjects\\vdsqabatch13\\chromedriver-win64\\chromedriver.exe";
+        String path2 = "C:\\Users\\Personal\\IdeaProjects\\SQABatchTrainingProject\\chromedriver-win64\\chromedriver.exe";
         String url = "https://demoqa.com/checkbox";
 
-        System.setProperty("webdriver.chrome.driver", path);
+        System.setProperty("webdriver.chrome.driver", path2);
         WebDriver driver = new ChromeDriver();
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -31,6 +32,7 @@ public class CheckBox {
         System.out.println("open web demoqa CheckBox");
 
         driver.findElement(By.cssSelector("#tree-node > ol > li > span > label")).click();
+        System.out.println("Finsih");
 
 
     }
