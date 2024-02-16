@@ -77,12 +77,26 @@ public class UjianMingguke3 {
         /*Scroll 2000px secara vertikal*/
         js.executeScript("window.scrollBy(0,1000)");
 
-        WebElement addChart = driver.findElement((By.xpath("//*[@id=\"product-704\"]/div[1]/div[2]/form/div/div[2]/button")));
-        addChart.click();
+        WebElement addCart = driver.findElement((By.xpath("//*[@id=\"product-704\"]/div[1]/div[2]/form/div/div[2]/button")));
+        addCart.click();
 
+
+        /* Assert validasi 1*/
         String hasBeenAddedCart = "Tokyo Talkies";
         String Cart = driver.findElement(By.xpath("//*[@id=\"noo-site\"]/div[2]/div/div/div[1]/div/div")).getText();
         if (expectedTxt.contains(Cart)){
+            System.out.println("Passed");
+        } else {
+            System.out.println("Failed");
+        }
+
+        WebElement viewCart = driver.findElement(By.xpath("//*[@id=\"noo-site\"]/div[2]/div/div/div[1]/div/div/a"));
+        viewCart.click();
+
+        /* Assert validasi 2*/
+        String currentPageCart = "Tokyo Talkies";
+        String onCart = driver.findElement(By.xpath("//*[@id=\"post-6\"]/div/div/form/table/tbody/tr[1]/td[2]/a")).getText();
+        if (expectedTxt.contains(onCart)){
             System.out.println("Passed");
         } else {
             System.out.println("Failed");
